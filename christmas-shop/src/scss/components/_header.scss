@@ -1,11 +1,12 @@
 @use '../constants' as *;
+@use '../abstracts' as *;
 
 .header {
-  padding: 0.75rem 5.125rem;
+  padding: px-to-rem(12) px-to-rem(82);
 
   .nav__list {
     display: flex;
-    gap: 0.5rem;
+    gap: px-to-rem(8);
     text-transform: uppercase;
   }
 
@@ -18,8 +19,8 @@
 
     .nav__link {
       display: flex;
-      padding: 0.75rem 1.25rem;
-      border-radius: 0.75rem;
+      padding: px-to-rem(12) px-to-rem(20);
+      border-radius: px-to-rem(12);
       transition: $transition;
 
       &:not(.logo):hover {
@@ -29,7 +30,7 @@
     }
 
     .logo {
-      gap: 0.5rem;
+      gap: px-to-rem(8);
       & .logo__text {
         align-self: center;
       }

@@ -1,4 +1,5 @@
 @use '../constants' as *;
+@use '../abstracts' as *;
 
 * {
   margin: 0;
@@ -13,4 +14,22 @@ a {
 body {
   background-color: $white;
   color: $dark;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  max-width: 236px;
+  padding: px-to-rem(20) px-to-rem(32);
+  border-style: none;
+  border-radius: px-to-rem(20);
+  background-color: $dark;
+  color: $white;
+  transition: $transition;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $white;
+    color: $dark;
+  }
 }

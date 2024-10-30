@@ -44,6 +44,7 @@ p {
 }
 
 .nav__link,
+.button,
 .cta-s {
   @extend %typography-base;
   font-size: $fs-12;
