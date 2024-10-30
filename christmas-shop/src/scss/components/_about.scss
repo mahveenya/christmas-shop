@@ -1,0 +1,44 @@
+@use '../constants' as *;
+@use '../abstracts' as *;
+
+.about {
+  display: flex;
+  justify-content: center;
+  padding: px-to-rem(60) px-to-rem(82);
+  background-color: $red;
+
+  &__caption {
+    color: $red;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    border-radius: px-to-rem(20);
+    background-color: $white;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: px-to-rem(60);
+    max-width: 426px;
+    gap: px-to-rem(20);
+  }
+
+  &__img-container {
+    display: flex;
+    min-width: 364px;
+    height: 528px;
+    overflow: hidden;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: px-to-rem(20);
+  }
+}
