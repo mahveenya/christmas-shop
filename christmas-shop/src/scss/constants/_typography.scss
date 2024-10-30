@@ -1,0 +1,26 @@
+@use '../abstracts/functions' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+//font
+$base-ff: 'Montserrat', sans-serif;
+$caption-ff: 'Allura', sans-serif;
+
+//font-size
+$fs-80: px-to-rem(80);
+$fs-32: px-to-rem(32);
+$fs-24: px-to-rem(24);
+$fs-16: px-to-rem(16);
+$fs-12: px-to-rem(12);
+
+//font-weight
+$base-fw: 600;
+$secondary-fw: 400;
+
+//line-height
+$lh-152: 152%;
+$lh-150: 150%;
+$lh-148: 148%;
+$lh-130: 130%;
+$lh-100: 100%;

@@ -1,0 +1,6 @@
+@use '../constants' as *;
+
+.wrapper {
+  max-width: $content-width;
+  margin-inline: auto;
+}

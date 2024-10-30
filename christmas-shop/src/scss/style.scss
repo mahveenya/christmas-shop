@@ -1,12 +1,5 @@
 @use 'modern-normalize';
-
-h1 {
-  color: brown;
-  &:hover {
-    color: violet;
-  }
-}
-
-h2:hover {
-  font-size: 4rem;
-}
+@use 'base/base';
+@use 'components/wrapper';
+@use 'components/typography';
+@use 'components/header';

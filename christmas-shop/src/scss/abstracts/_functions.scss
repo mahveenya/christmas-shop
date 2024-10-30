@@ -1,0 +1,9 @@
+@function px-to-rem($px) {
+  $rem: calc($px / 16);
+  @return calc(round($rem * 100) / 100) * 1rem;
+}
+
+@function percentage-to-rem($percentage, $font-size) {
+  $decimal: calc($percentage / 100);
+  @return calc($font-size * $decimal);
+}

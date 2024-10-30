@@ -1,0 +1,7 @@
+@use '../constants' as *;
+
+%typography-base {
+  font-family: $base-ff;
+  font-weight: $base-fw;
+  text-transform: uppercase;
+}

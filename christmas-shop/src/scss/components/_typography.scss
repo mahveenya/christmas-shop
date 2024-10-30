@@ -1,0 +1,65 @@
+@use '../constants' as *;
+@use '../abstracts' as *;
+
+h1 {
+  @extend %typography-base;
+  font-size: $fs-32;
+  line-height: $lh-150;
+  letter-spacing: percentage-to-rem(18, $fs-32);
+}
+
+h2 {
+  @extend %typography-base;
+  font-size: $fs-24;
+  line-height: $lh-152;
+  letter-spacing: percentage-to-rem(16, $fs-24);
+}
+
+h3 {
+  @extend %typography-base;
+  font-size: $fs-16;
+  line-height: $lh-152;
+  letter-spacing: percentage-to-rem(8, $fs-16);
+}
+
+h4 {
+  @extend %typography-base;
+  font-size: $fs-12;
+  line-height: $lh-130;
+  letter-spacing: percentage-to-rem(5, $fs-12);
+}
+
+p {
+  @extend %typography-base;
+  font-size: $fs-16;
+  font-weight: $secondary-fw;
+  line-height: $lh-148;
+}
+
+.cta-l {
+  @extend %typography-base;
+  font-size: $fs-24;
+  line-height: $lh-152;
+  letter-spacing: percentage-to-rem(16, $fs-24);
+}
+
+.nav__link,
+.cta-s {
+  @extend %typography-base;
+  font-size: $fs-12;
+  line-height: $lh-130;
+  letter-spacing: percentage-to-rem(5, $fs-12);
+}
+
+.caption {
+  font-family: $caption-ff;
+  font-size: $fs-24;
+  font-weight: $secondary-fw;
+  line-height: $lh-100;
+  letter-spacing: percentage-to-rem(5, $fs-24);
+}
+
+.slider {
+  @extend %typography-base;
+  font-size: $fs-80;
+}
