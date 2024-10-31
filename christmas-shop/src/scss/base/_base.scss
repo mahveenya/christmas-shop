@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+:has(:target) {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;

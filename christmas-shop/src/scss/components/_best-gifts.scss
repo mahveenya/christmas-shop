@@ -1,7 +1,7 @@
 @use '../constants' as *;
 @use '../abstracts' as *;
 
-.gifts {
+.best-gifts {
   @include bg();
   display: flex;
   flex-direction: column;
