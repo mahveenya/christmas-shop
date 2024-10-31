@@ -1,2 +1,6 @@
-// misc
+@use '../abstracts/functions' as *;
+
+$content-inline-padding: px-to-rem(82);
+$content-block-padding: px-to-rem(60);
+$base-radius: px-to-rem(20);
 $transition: 0.5s ease-in-out;

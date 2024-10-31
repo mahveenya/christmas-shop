@@ -5,8 +5,8 @@
   display: flex;
   justify-content: center;
   padding-block: px-to-rem(120);
-  border-top-left-radius: px-to-rem(20);
-  border-top-right-radius: px-to-rem(20);
+  border-top-left-radius: $base-radius;
+  border-top-right-radius: $base-radius;
   background-color: $red;
   background-image: url('src/assets/img/bg-ball.png'),
     url('src/assets/img/bg-snow.png');
@@ -15,12 +15,23 @@
   background-repeat: no-repeat;
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    @extend %sentered-text;
     gap: px-to-rem(12);
-    align-items: center;
     max-width: 430px;
-    text-align: center;
     color: $white;
+  }
+
+  &__button {
+    @extend %button;
+    max-width: 236px;
+    padding: px-to-rem(20) px-to-rem(32);
+    border-style: none;
+    background-color: $dark;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $dark;
+    }
   }
 }

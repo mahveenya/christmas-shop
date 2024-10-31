@@ -2,7 +2,8 @@
 @use '../abstracts' as *;
 
 .header {
-  padding: px-to-rem(12) px-to-rem(82);
+  padding-inline: $content-inline-padding;
+  padding-block: px-to-rem(12);
 
   .nav__list {
     display: flex;

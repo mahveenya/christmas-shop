@@ -4,7 +4,7 @@
 .about {
   display: flex;
   justify-content: center;
-  padding: px-to-rem(60) px-to-rem(82);
+  padding: $content-block-padding $content-inline-padding;
   background-color: $red;
 
   &__caption {
@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
-    border-radius: px-to-rem(20);
+    border-radius: $base-radius;
     background-color: $white;
   }
 
@@ -29,16 +29,13 @@
   }
 
   &__img-container {
-    display: flex;
     min-width: 364px;
     height: 528px;
     overflow: hidden;
   }
 
   &__img {
-    display: block;
-    width: 100%;
     object-fit: cover;
-    border-radius: px-to-rem(20);
+    border-radius: $base-radius;
   }
 }

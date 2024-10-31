@@ -1,0 +1,62 @@
+@use '../constants' as *;
+@use '../abstracts' as *;
+
+.advice {
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(20);
+  padding: $content-block-padding $content-inline-padding;
+  color: $white;
+  background-color: $red;
+
+  &__texts {
+    @extend %sentered-text;
+    gap: px-to-rem(12);
+  }
+
+  .slider {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-rem(20);
+
+    &__slides {
+      display: flex;
+      gap: px-to-rem(20);
+    }
+
+    &__slide-img-container {
+      min-width: 200px;
+      height: 200px;
+    }
+
+    &__slide-img {
+      object-fit: cover;
+      border-radius: $base-radius;
+    }
+
+    &__buttons {
+      display: flex;
+      align-self: flex-end;
+      gap: px-to-rem(20);
+    }
+
+    &__button {
+      @extend %button;
+      width: 56px;
+      height: 56px;
+      border: solid $white 1px;
+
+      &--disabled {
+        border-color: $white-40;
+
+        & svg path {
+          stroke: $white-40;
+        }
+      }
+
+      &-arrow--left {
+        rotate: 180deg;
+      }
+    }
+  }
+}

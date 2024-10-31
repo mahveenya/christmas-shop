@@ -3,6 +3,26 @@
 %typography-base {
   font-family: $base-ff;
   font-weight: $base-fw;
-  color: $dark;
   text-transform: uppercase;
+}
+
+%sentered-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+%button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: inherit;
+  border-radius: $base-radius;
+  background-color: inherit;
+  transition: $transition;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
