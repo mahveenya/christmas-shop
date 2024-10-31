@@ -5,20 +5,22 @@
   padding-inline: $content-inline-padding;
   padding-block: px-to-rem(12);
 
-  .nav__list {
-    display: flex;
-    gap: px-to-rem(8);
-    text-transform: uppercase;
-  }
-
-  .nav__item {
-    display: flex;
-    align-items: center;
-    &:first-child {
-      flex-grow: 1;
+  &__nav {
+    &-list {
+      display: flex;
+      gap: px-to-rem(8);
+      text-transform: uppercase;
     }
 
-    .nav__link {
+    &-item {
+      display: flex;
+      align-items: center;
+      &:first-child {
+        flex-grow: 1;
+      }
+    }
+
+    &-link {
       display: flex;
       padding: px-to-rem(12) px-to-rem(20);
       border-radius: px-to-rem(12);
@@ -29,12 +31,18 @@
         color: $red;
       }
     }
+  }
 
-    .logo {
-      gap: px-to-rem(8);
-      & .logo__text {
-        align-self: center;
-      }
+  &__logo {
+    gap: px-to-rem(8);
+
+    &-svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &-text {
+      align-self: center;
     }
   }
 }

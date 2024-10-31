@@ -44,8 +44,6 @@ p {
   letter-spacing: percentage-to-rem(16, $fs-24);
 }
 
-.nav__link,
-.button,
 .cta-s {
   @extend %typography-base;
   font-size: $fs-12;

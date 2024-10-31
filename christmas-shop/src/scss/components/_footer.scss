@@ -1,0 +1,31 @@
+@use '../constants' as *;
+@use '../abstracts' as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: $content-block-padding $content-inline-padding;
+  gap: px-to-rem(60);
+
+  &__contact-cards {
+    display: flex;
+    gap: px-to-rem(12);
+  }
+  &__contact-card {
+    @extend %centered-text;
+    gap: px-to-rem(12);
+    padding: px-to-rem(20);
+    border-radius: $base-radius;
+    background-color: $soft-sky;
+    flex-grow: 1;
+  }
+  &__contact-card-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__contacts {
+    @extend %centered-text;
+    gap: px-to-rem(12);
+  }
+}
