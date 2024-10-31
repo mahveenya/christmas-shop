@@ -2,15 +2,15 @@
 @use '../abstracts' as *;
 
 .advice {
+  @include bg();
   display: flex;
   flex-direction: column;
   gap: px-to-rem(20);
   padding: $content-block-padding $content-inline-padding;
   color: $white;
-  background-color: $red;
 
   &__texts {
-    @extend %sentered-text;
+    @extend %centered-text;
     gap: px-to-rem(12);
   }
 

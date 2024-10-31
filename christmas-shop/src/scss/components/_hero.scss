@@ -2,20 +2,15 @@
 @use '../abstracts' as *;
 
 .hero {
+  @include bg($second-img: url('src/assets/img/bg-ball.png'));
   display: flex;
   justify-content: center;
   padding-block: px-to-rem(120);
   border-top-left-radius: $base-radius;
   border-top-right-radius: $base-radius;
-  background-color: $red;
-  background-image: url('src/assets/img/bg-ball.png'),
-    url('src/assets/img/bg-snow.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
   &__content {
-    @extend %sentered-text;
+    @extend %centered-text;
     gap: px-to-rem(12);
     max-width: 430px;
     color: $white;

@@ -1,0 +1,45 @@
+@use '../constants' as *;
+@use '../abstracts' as *;
+
+.gifts {
+  @include bg();
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(20);
+  padding: $content-block-padding $content-inline-padding;
+
+  &__texts {
+    @extend %centered-text;
+    gap: px-to-rem(12);
+    color: $white;
+  }
+
+  &__cards {
+    display: flex;
+    gap: px-to-rem(12);
+  }
+
+  &__card-figure {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: 350px;
+    border-radius: $base-radius;
+    background-color: $soft-sky;
+  }
+
+  &__card-figcaption {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    gap: px-to-rem(8);
+    padding: px-to-rem(20);
+    border-radius: $base-radius;
+    background-color: $white;
+  }
+
+  &__card-img {
+    object-fit: cover;
+    border-radius: $base-radius;
+  }
+}

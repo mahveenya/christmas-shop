@@ -21,3 +21,13 @@ img {
   width: 100%;
   height: 100%;
 }
+
+[data-label='for-work'] {
+  color: $blue;
+}
+[data-label='for-harmony'] {
+  color: $pink;
+}
+[data-label='for-health'] {
+  color: $green;
+}

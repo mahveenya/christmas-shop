@@ -1,0 +1,9 @@
+@use '../constants' as *;
+
+@mixin bg($second-img: null) {
+  background-color: $red;
+  background-image: url('src/assets/img/bg-snow.png'), $second-img;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -2,10 +2,10 @@
 @use '../abstracts' as *;
 
 .about {
+  @include bg();
   display: flex;
   justify-content: center;
   padding: $content-block-padding $content-inline-padding;
-  background-color: $red;
 
   &__caption {
     color: $red;
