@@ -1,0 +1,57 @@
+@use '../constants' as *;
+@use '../abstracts' as *;
+
+.countdown {
+  @include bg($second-img: url('src/assets/img/bg-forest.png'));
+  display: flex;
+  justify-content: center;
+  padding-block: px-to-rem(180);
+  color: $white;
+  border-bottom-left-radius: $base-radius;
+  border-bottom-right-radius: $base-radius;
+
+  &__content {
+    @extend %centered-text;
+    gap: px-to-rem(20);
+    max-width: 430px;
+    color: $white;
+  }
+
+  &__clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: px-to-rem(8) px-to-rem(12);
+    background-color: $white-40;
+    border-radius: $base-radius;
+
+    &-time-cell {
+      width: 80px;
+    }
+  }
+
+  &__clock-and-caption {
+    display: flex;
+    flex-direction: column;
+    gap: px-to-rem(8);
+  }
+
+  &__clock-time-cell-separator {
+    height: 20px;
+    border: solid $white-40 1px;
+  }
+
+  &__button {
+    @extend %button;
+    max-width: 236px;
+    padding: px-to-rem(20) px-to-rem(32);
+    border-style: none;
+    background-color: $dark;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $dark;
+    }
+  }
+}
