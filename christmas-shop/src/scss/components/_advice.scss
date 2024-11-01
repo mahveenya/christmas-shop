@@ -46,8 +46,18 @@
       height: 56px;
       border: solid $white 1px;
 
-      &--disabled {
+      &:not(&--disabled):hover {
+        background-color: $white;
+
+        & svg path {
+          stroke: $red;
+        }
+      }
+
+      &--disabled,
+      &--disabled:hover {
         border-color: $white-40;
+        cursor: default;
 
         & svg path {
           stroke: $white-40;

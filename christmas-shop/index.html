@@ -29,7 +29,7 @@
               </a>
             </li>
             <li class="header__nav-item">
-              <a href="#gifts" class="header__nav-link">gifts</a>
+              <a href="/gifts" class="header__nav-link">gifts</a>
             </li>
             <li class="header__nav-item">
               <a href="#about" class="header__nav-link">about</a>
@@ -38,7 +38,7 @@
               <a href="#best-gifts" class="header__nav-link">best</a>
             </li>
             <li class="header__nav-item">
-              <a href="#contacts" class="header__nav-link">contacts</a>
+              <a href="#footer" class="header__nav-link">contacts</a>
             </li>
           </ul>
         </nav>
@@ -48,7 +48,9 @@
           <div class="hero__content">
             <span class="caption">Merry Christmas</span>
             <h1>Gift yourself the magic of new possibilities</h1>
-            <button class="hero__button cta-s">Explore Magical Gifts</button>
+            <button class="hero__button cta-s" data-url="/gifts">
+              Explore Magical Gifts
+            </button>
             <span class="caption">and Happy New Year</span>
           </div>
         </section>
@@ -150,7 +152,7 @@
             </div>
           </div>
         </section>
-        <section class="best-gifts">
+        <section id="best-gifts" class="best-gifts">
           <div class="best-gifts__texts">
             <span class="caption">Best Gifts</span>
             <h2>especially for you</h2>
@@ -160,9 +162,9 @@
               <img
                 src="/src/assets/img/gift-for-work.png"
                 alt="gift image"
-                class="best-gifts__card-img"
+                class="best-gifts__card-figure-img"
               />
-              <figcaption class="best-gifts__card-figcaption">
+              <figcaption class="best-gifts__card-figure-figcaption">
                 <h4 data-label="for-work" data-label="for-work">for work</h4>
                 <h3>Console.log Guru</h3>
               </figcaption>
@@ -171,9 +173,9 @@
               <img
                 src="/src/assets/img/gift-for-health.png"
                 alt="gift image"
-                class="best-gifts__card-img"
+                class="best-gifts__card-figure-img"
               />
-              <figcaption class="best-gifts__card-figcaption">
+              <figcaption class="best-gifts__card-figure-figcaption">
                 <h4 data-label="for-health">for health</h4>
                 <h3>Hydration Bot</h3>
               </figcaption>
@@ -182,9 +184,9 @@
               <img
                 src="/src/assets/img/gift-for-work.png"
                 alt="gift image"
-                class="best-gifts__card-img"
+                class="best-gifts__card-figure-img"
               />
-              <figcaption class="best-gifts__card-figcaption">
+              <figcaption class="best-gifts__card-figure-figcaption">
                 <h4 data-label="for-work">for work</h4>
                 <h3>Merge Master</h3>
               </figcaption>
@@ -193,9 +195,9 @@
               <img
                 src="/src/assets/img/gift-for-harmony.png"
                 alt="gift image"
-                class="best-gifts__card-img"
+                class="best-gifts__card-figure-img"
               />
-              <figcaption class="best-gifts__card-figcaption">
+              <figcaption class="best-gifts__card-figure-figcaption">
                 <h4 data-label="for-harmony">for harmony</h4>
                 <h3>Spontaneous Coding Philosopher</h3>
               </figcaption>
@@ -207,7 +209,7 @@
             <h2>
               Ready to start your journey to a better version of yourself?
             </h2>
-            <button class="countdown__button cta-s">
+            <button class="countdown__button cta-s" data-url="/gifts">
               Explore Magical Gifts
             </button>
             <div class="countdown__clock-and-caption">
@@ -243,7 +245,7 @@
           </div>
         </section>
       </main>
-      <footer class="footer">
+      <footer id="footer" class="footer">
         <div class="footer__contact-cards cta-l">
           <a href="tel:+375291112233" class="footer__contact-card">
             <img
@@ -252,7 +254,7 @@
               class="footer__contact-card-img"
             />
             <div class="footer__contact-card-text">
-              <span class="cta-l">+375 (29) 111-22-33</span>
+              <span>+375 (29) 111-22-33</span>
               <h3>call us</h3>
             </div>
           </a>
@@ -266,8 +268,8 @@
               alt="snake"
               class="footer__contact-card-img"
             />
-            <div class="footer__contact-card-figcaption">
-              <span class="cta-l">magic forest</span>
+            <div class="footer__contact-card-text">
+              <span>magic forest</span>
               <h3>meet us</h3>
             </div>
           </a>
@@ -277,8 +279,8 @@
               alt="snake"
               class="footer__contact-card-img"
             />
-            <div class="footer__contact-card-figcaption">
-              <span class="cta-l">gifts@magic.com</span>
+            <div class="footer__contact-card-text">
+              <span>gifts@magic.com</span>
               <h3>write us</h3>
             </div>
           </a>
@@ -286,6 +288,7 @@
         <div class="footer__contacts">
           <div class="footer__socials">
             <a
+              class="footer__social"
               href="https://telegram.org/"
               target="_blank"
               rel="noopener noreferrer"
@@ -307,6 +310,7 @@
               </svg>
             </a>
             <a
+              class="footer__social"
               href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -328,6 +332,7 @@
               </svg>
             </a>
             <a
+              class="footer__social"
               href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -360,7 +365,12 @@
                 />
               </svg>
             </a>
-            <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+            <a
+              class="footer__social"
+              href="https://x.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 width="40"
                 height="40"

@@ -26,20 +26,29 @@
     height: 350px;
     border-radius: $base-radius;
     background-color: $soft-sky;
-  }
 
-  &__card-figcaption {
-    display: flex;
-    flex-direction: column;
-    height: 150px;
-    gap: px-to-rem(8);
-    padding: px-to-rem(20);
-    border-radius: $base-radius;
-    background-color: $white;
-  }
+    &:hover {
+      cursor: pointer;
+    }
 
-  &__card-img {
-    object-fit: cover;
-    border-radius: $base-radius;
+    &:hover &-figcaption:last-child {
+      color: $red;
+    }
+
+    &-figcaption {
+      display: flex;
+      flex-direction: column;
+      height: 150px;
+      gap: px-to-rem(8);
+      padding: px-to-rem(20);
+      border-radius: $base-radius;
+      background-color: $white;
+      transition: $transition;
+    }
+
+    &-img {
+      object-fit: cover;
+      border-radius: $base-radius;
+    }
   }
 }

@@ -18,14 +18,39 @@
     border-radius: $base-radius;
     background-color: $soft-sky;
     flex-grow: 1;
-  }
-  &__contact-card-img {
-    width: 80px;
-    height: 80px;
+
+    &-text {
+      transition: $transition;
+    }
+
+    &:hover &-text {
+      color: $red;
+    }
+
+    &-img {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &__contacts {
     @extend %centered-text;
     gap: px-to-rem(12);
+  }
+
+  &__social svg path {
+    transition: $transition;
+  }
+
+  &__social:hover svg path {
+    stroke: $red;
+    cursor: pointer;
+  }
+
+  &__rss {
+    transition: $transition;
+    &:hover {
+      color: $red;
+    }
   }
 }
