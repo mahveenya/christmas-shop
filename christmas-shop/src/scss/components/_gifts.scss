@@ -1,7 +1,7 @@
 @use '../constants' as *;
 @use '../abstracts' as *;
 
-.best-gifts {
+.gifts {
   @include bg();
   display: flex;
   flex-direction: column;
@@ -16,13 +16,14 @@
 
   &__cards {
     display: flex;
+    flex-wrap: wrap;
     gap: px-to-rem(12);
   }
 
-  &__card-figure {
+  &__card {
     display: flex;
     flex-direction: column;
-    width: 310px;
+    width: 309px;
     height: 350px;
     border-radius: $base-radius;
     background-color: $soft-sky;
@@ -38,6 +39,7 @@
     &-figcaption {
       display: flex;
       flex-direction: column;
+      flex-grow: 0;
       height: 150px;
       gap: px-to-rem(8);
       padding: px-to-rem(20);
@@ -49,6 +51,13 @@
     &-img {
       object-fit: cover;
       border-radius: $base-radius;
+    }
+
+    &-description--truncate {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
     }
   }
 }
