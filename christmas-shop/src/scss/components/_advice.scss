@@ -2,7 +2,7 @@
 @use '../abstracts' as *;
 
 .advice {
-  @include bg();
+  @include bg(url('src/assets/img/bg-snow.png'));
   display: flex;
   flex-direction: column;
   gap: px-to-rem(20);

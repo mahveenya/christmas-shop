@@ -1,8 +1,8 @@
+@use 'sass:list';
 @use '../constants' as *;
 
-@mixin bg($second-img: null) {
-  background-color: $red;
-  background-image: url('src/assets/img/bg-snow.png'), $second-img;
+@mixin bg($backgrounds...) {
+  background-image: $backgrounds;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

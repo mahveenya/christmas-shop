@@ -21,6 +21,11 @@ body {
   color: $dark;
 }
 
+main {
+  background-color: $red;
+  border-radius: $base-radius;
+}
+
 img {
   display: block;
   width: 100%;

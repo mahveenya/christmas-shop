@@ -2,13 +2,14 @@
 @use '../abstracts' as *;
 
 .countdown {
-  @include bg($second-img: url('src/assets/img/bg-forest.png'));
+  @include bg(
+    url('src/assets/img/bg-snow.png'),
+    url('src/assets/img/bg-forest.png')
+  );
   display: flex;
   justify-content: center;
   padding-block: px-to-rem(180);
   color: $white;
-  border-bottom-left-radius: $base-radius;
-  border-bottom-right-radius: $base-radius;
 
   &__content {
     @extend %centered-text;
