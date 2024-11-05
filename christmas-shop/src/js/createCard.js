@@ -1,16 +1,3 @@
-const cardData = {
-  name: 'Bug Magnet',
-  description:
-    'Able to find bugs in code like they were placed there on purpose.',
-  category: 'For Work',
-  superpowers: {
-    live: '+500',
-    create: '+500',
-    love: '+200',
-    dream: '+400',
-  },
-}
-
 export function createCard(cardData) {
   const figure = document.createElement('figure')
   const img = document.createElement('img')
@@ -39,5 +26,3 @@ export function createCard(cardData) {
 
   return figure
 }
-
-// console.log( createCard(cardData));
