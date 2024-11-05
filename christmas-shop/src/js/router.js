@@ -55,7 +55,7 @@ const locationHandler = async () => {
   const html = await fetch(route.template)
   const htmlText = await html.text()
 
-  document.getElementById('content').innerHTML = htmlText
+  document.getElementById('main').innerHTML = htmlText
   document.title = route.title
   document
     .querySelector('meta[name="description"]')
