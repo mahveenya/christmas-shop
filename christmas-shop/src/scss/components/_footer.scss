@@ -12,7 +12,7 @@
     gap: px-to-rem(12);
   }
   &__contact-card {
-    @extend %centered-text;
+    @extend %centered;
     gap: px-to-rem(12);
     padding: px-to-rem(20);
     border-radius: $base-radius;
@@ -34,7 +34,7 @@
   }
 
   &__contacts {
-    @extend %centered-text;
+    @extend %centered;
     gap: px-to-rem(12);
   }
 

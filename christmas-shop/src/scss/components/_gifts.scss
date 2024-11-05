@@ -2,23 +2,24 @@
 @use '../abstracts' as *;
 
 .gifts {
+  @include bg(url('src/assets/img/bg-garland.png'));
   display: flex;
   flex-direction: column;
   gap: px-to-rem(20);
   padding: $content-block-padding $content-inline-padding;
-
-  &.best-gifts {
-    @include bg(url('src/assets/img/bg-snow.png'));
-  }
+  background-size: contain;
+  background-position-y: top;
 
   &__texts {
-    @extend %centered-text;
+    @extend %centered;
+    width: 426px;
     gap: px-to-rem(12);
     color: $white;
   }
 
   &__cards {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: px-to-rem(12);
   }
@@ -26,8 +27,7 @@
   &__card {
     display: flex;
     flex-direction: column;
-    width: 309px;
-    height: 350px;
+    width: 310px;
     border-radius: $base-radius;
     background-color: $soft-sky;
 
@@ -43,7 +43,6 @@
       display: flex;
       flex-direction: column;
       flex-grow: 0;
-      height: 150px;
       gap: px-to-rem(8);
       padding: px-to-rem(20);
       border-radius: $base-radius;
@@ -61,6 +60,28 @@
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
       overflow: hidden;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    gap: px-to-rem(8);
+    color: $white;
+  }
+
+  &__tab {
+    @extend %button;
+    padding: px-to-rem(12) px-to-rem(20);
+    border-radius: px-to-rem(12);
+    color: $white;
+
+    &--active {
+      @extend %active-tab;
+    }
+
+    &:not(&--active):hover {
+      background-color: $white-20;
     }
   }
 }

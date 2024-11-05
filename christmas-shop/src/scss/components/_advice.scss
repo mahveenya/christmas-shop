@@ -10,7 +10,7 @@
   color: $white;
 
   &__texts {
-    @extend %centered-text;
+    @extend %centered;
     gap: px-to-rem(12);
   }
 
@@ -34,17 +34,14 @@
       border-radius: $base-radius;
     }
 
-    &__buttons {
+    &__arrows {
       display: flex;
       align-self: flex-end;
       gap: px-to-rem(20);
     }
 
-    &__button {
-      @extend %button;
-      width: 56px;
-      height: 56px;
-      border: solid $white 1px;
+    &__arrow {
+      @extend %slider-arrow;
 
       &:not(&--disabled):hover {
         background-color: $white;
@@ -64,7 +61,7 @@
         }
       }
 
-      &-arrow--left {
+      &--left {
         rotate: 180deg;
       }
     }

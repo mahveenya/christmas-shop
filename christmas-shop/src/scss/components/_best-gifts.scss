@@ -1,0 +1,6 @@
+@use '../constants' as *;
+@use '../abstracts' as *;
+
+.best-gifts {
+  @include bg(url('src/assets/img/bg-snow.png'));
+}

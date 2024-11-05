@@ -3,7 +3,7 @@ import giftsData from '../assets/data/gifts'
 export function getRandomGifts(numOfGifts) {
   if (numOfGifts > giftsData.length) {
     throw new Error(
-      `Number of required cards to be returned canot be more than ${giftsData.length}`
+      `Number of required cards to be returned cannot be more than ${giftsData.length}`
     )
   }
 

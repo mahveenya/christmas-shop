@@ -1,6 +1,8 @@
 @use '../abstracts/functions' as *;
 
-$content-inline-padding: px-to-rem(82);
+$content-width: px-to-rem(1440);
+$content-inline-padding: px-to-rem(81.9);
 $content-block-padding: px-to-rem(60);
+$button-padding: px-to-rem(20) px-to-rem(32);
 $base-radius: px-to-rem(20);
 $transition: 0.5s ease-in-out;

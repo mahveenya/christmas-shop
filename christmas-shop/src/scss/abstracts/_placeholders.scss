@@ -6,9 +6,10 @@
   text-transform: uppercase;
 }
 
-%centered-text {
+%centered {
   display: flex;
   flex-direction: column;
+  align-self: center;
   align-items: center;
   text-align: center;
 }
@@ -18,11 +19,28 @@
   justify-content: center;
   align-items: center;
   font: inherit;
+  padding: $button-padding;
+  border: none;
   border-radius: $base-radius;
   background-color: inherit;
   transition: $transition;
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+%slider-arrow {
+  @extend %button;
+  width: 56px;
+  height: 56px;
+  border: solid $white 1px;
+  padding: initial;
+}
+
+%active-tab {
+  background-color: $white-20;
+  &:hover {
+    cursor: default;
   }
 }

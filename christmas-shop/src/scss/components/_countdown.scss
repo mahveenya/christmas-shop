@@ -12,7 +12,7 @@
   color: $white;
 
   &__content {
-    @extend %centered-text;
+    @extend %centered;
     gap: px-to-rem(20);
     max-width: 430px;
     color: $white;
@@ -25,6 +25,7 @@
     padding: px-to-rem(8) px-to-rem(12);
     background-color: $white-40;
     border-radius: $base-radius;
+    user-select: none;
 
     &-time-cell {
       width: 80px;
@@ -45,8 +46,6 @@
   &__button {
     @extend %button;
     max-width: 236px;
-    padding: px-to-rem(20) px-to-rem(32);
-    border-style: none;
     background-color: $dark;
     color: $white;
 
