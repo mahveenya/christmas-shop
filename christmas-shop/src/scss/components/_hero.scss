@@ -19,7 +19,7 @@
 
   &__button {
     @extend %button;
-    max-width: 236px;
+    width: 236px;
     background-color: $dark;
     color: $white;
 

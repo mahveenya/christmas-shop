@@ -21,6 +21,7 @@
 
     &__slides {
       display: flex;
+      align-items: center;
       gap: px-to-rem(20);
     }
 

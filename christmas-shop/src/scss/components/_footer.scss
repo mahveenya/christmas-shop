@@ -10,16 +10,20 @@
   &__contact-cards {
     display: flex;
     gap: px-to-rem(12);
+    flex-wrap: wrap;
   }
   &__contact-card {
     @extend %centered;
     gap: px-to-rem(12);
     padding: px-to-rem(20);
+    min-width: 364px;
     border-radius: $base-radius;
     background-color: $soft-sky;
-    flex-grow: 1;
+    flex: 1;
 
     &-text {
+      @extend %centered;
+      gap: px-to-rem(12);
       transition: $transition;
     }
 
@@ -38,13 +42,22 @@
     gap: px-to-rem(12);
   }
 
-  &__social svg path {
-    transition: $transition;
+  &__socials {
+    display: flex;
+    gap: px-to-rem(12);
   }
 
-  &__social:hover svg path {
-    stroke: $red;
-    cursor: pointer;
+  &__social {
+    display: flex;
+
+    & svg path {
+      transition: $transition;
+    }
+
+    &:hover svg path {
+      stroke: $red;
+      cursor: pointer;
+    }
   }
 
   &__rss {

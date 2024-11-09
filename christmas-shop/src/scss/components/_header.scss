@@ -6,6 +6,24 @@
   padding-block: px-to-rem(12);
 
   &__nav {
+    display: flex;
+    justify-content: space-between;
+
+    &-logo {
+      display: flex;
+      align-items: center;
+      gap: px-to-rem(8);
+      padding: px-to-rem(8) px-to-rem(20);
+
+      &-svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      &-text {
+        align-self: center;
+      }
+    }
     &-list {
       display: flex;
       gap: px-to-rem(8);
@@ -15,9 +33,6 @@
     &-item {
       display: flex;
       align-items: center;
-      &:first-child {
-        flex-grow: 1;
-      }
     }
 
     &-link {
@@ -30,19 +45,6 @@
         background-color: $red-10;
         color: $red;
       }
-    }
-  }
-
-  &__logo {
-    gap: px-to-rem(8);
-
-    &-svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    &-text {
-      align-self: center;
     }
   }
 }

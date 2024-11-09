@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: px-to-rem(8) px-to-rem(12);
+    padding: px-to-rem(8) px-to-rem(12) px-to-rem(12);
     background-color: $white-40;
     border-radius: $base-radius;
     user-select: none;
@@ -45,7 +45,7 @@
 
   &__button {
     @extend %button;
-    max-width: 236px;
+    width: 236px;
     background-color: $dark;
     color: $white;
 
