@@ -4,6 +4,7 @@ export default defineConfig({
   base: '/',
   build: {
     sourcemap: true,
+    outDir: 'dist/christmas-shop',
   },
   css: {
     preprocessorOptions: {
