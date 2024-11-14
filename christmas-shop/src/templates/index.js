@@ -1,4 +1,4 @@
-<section class="hero">
+export let index = `<section class="hero">
   <div class="hero__content">
     <span class="caption">Merry Christmas</span>
     <h1>Gift yourself the magic of new possibilities</h1>
@@ -142,4 +142,4 @@
       </div>
     </div>
   </div>
-</section>
+</section>`

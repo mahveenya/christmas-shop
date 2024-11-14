@@ -1,65 +1,50 @@
-const pageTitle = 'Christmas-Shop'
+import { populateGiftsSection } from '../js/populateGiftsSection'
+import { index } from '../templates/index'
+import { notFound } from '../templates/404'
+import { gifts } from '../templates/gifts'
 
 document.addEventListener('click', (e) => {
-  let { target } = e
+  const hasURL = e.target.dataset.url
+  const element = e.target.closest('a')
+  const isAnchor = element?.href.includes('#')
 
-  const hasURL = target.dataset.url
+  if (!hasURL || isAnchor) return
 
-  if (!hasURL) return
-
-  if (hasURL) {
-    route(target)
-    return
-  }
-
-  target = target.closest('a')
-  const isAnchor = target.href.includes('#')
-
-  if (isAnchor) return
-
-  e.preventDefault()
-  route(target)
+  route(e)
 })
 
 const routes = {
-  404: {
-    template: '/src/templates/404.html',
-    title: `404 | ${pageTitle}`,
-    description: 'Page not found',
-  },
-  '/': {
-    template: '/src/templates/index.html',
-    title: `${pageTitle}`,
-    description: 'This is the homepage',
-  },
-  '/gifts': {
-    template: '/src/templates/gifts.html',
-    title: `Gifts | ${pageTitle}`,
-    description: 'This is the gifts page',
-  },
+  '/mahveenya-JSFE2024Q4/christmas-shop/404': notFound,
+  '/mahveenya-JSFE2024Q4/christmas-shop/': index,
+  '/mahveenya-JSFE2024Q4/christmas-shop/gifts': gifts,
 }
 
-const route = (target) => {
-  window.history.pushState({}, '', target.href || target.dataset.url)
+const route = (e) => {
+  const url = e.target.href || e.target.dataset.url
+  window.history.pushState({}, '', url)
   locationHandler()
+  if (url == '/gifts') {
+    window.scrollTo({
+      top: 0,
+    })
+  }
 }
 
-const locationHandler = async () => {
+const locationHandler = () => {
   const location = window.location.pathname
 
   if (location.length == 0) {
-    location = '/'
+    location = '/mahveenya-JSFE2024Q4/christmas-shop/'
   }
 
-  const route = routes[location] || routes[404]
-  const html = await fetch(route.template)
-  const htmlText = await html.text()
+  const isOnHomepage = location === '/mahveenya-JSFE2024Q4/christmas-shop/'
+  const numOfGifts = isOnHomepage ? 4 : 12
 
-  document.getElementById('main').innerHTML = htmlText
-  document.title = route.title
-  document
-    .querySelector('meta[name="description"]')
-    .setAttribute('content', route.description)
+  const main = document.getElementById('main')
+
+  main.innerHTML = routes[location] || 404
+
+  populateGiftsSection(numOfGifts)
 }
 
 window.onpopstate = locationHandler

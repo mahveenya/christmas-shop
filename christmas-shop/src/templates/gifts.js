@@ -1,4 +1,4 @@
-<section class="gifts">
+export let gifts = `<section class="gifts">
   <div class="gifts__texts">
     <h1>Achieve health, harmony, and inner strength</h1>
   </div>
@@ -9,4 +9,4 @@
     <button class="gifts__tab cta-s">for harmony</button>
   </div>
   <div class="gifts__cards"></div>
-</section>
+</section>`

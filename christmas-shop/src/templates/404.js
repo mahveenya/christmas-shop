@@ -1,4 +1,4 @@
-<div
+export let notFound = `<div
   style="
     display: flex;
     justify-content: center;
@@ -16,4 +16,4 @@
     <div>classic 404 error</div>
     <div>Page not found</div>
   </div>
-</div>
+</div>`
