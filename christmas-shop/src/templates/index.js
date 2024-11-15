@@ -1,8 +1,14 @@
+import santaImage from '/src/assets/img/santa.png'
+import snowmanImage from '/src/assets/img/snowman.png'
+import christmasTreesImage from '/src/assets/img/christmas-trees.png'
+import christmasTreeBallImage from '/src/assets/img/christmas-tree-ball.png'
+import fairytaleHouseImage from '/src/assets/img/fairytale-house.png'
+
 export let index = `<section class="hero">
   <div class="hero__content">
     <span class="caption">Merry Christmas</span>
     <h1>Gift yourself the magic of new possibilities</h1>
-    <button class="hero__button cta-s" data-url="/gifts">
+    <button class="hero__button cta-s" data-url="/mahveenya-JSFE2024Q4/christmas-shop/gifts">
       Explore Magical Gifts
     </button>
     <span class="caption">and Happy New Year</span>
@@ -21,7 +27,7 @@ export let index = `<section class="hero">
     </div>
     <div class="about__img-container">
       <img
-        src="/src/assets/img/santa.png"
+        src="${santaImage}"
         alt="Santa Claus"
         class="about__img"
       />
@@ -39,7 +45,7 @@ export let index = `<section class="hero">
       <div class="slider__slide-img-container">
         <img
           class="slider__slide-img"
-          src="/src/assets/img/snowman.png"
+          src="${snowmanImage}"
           alt="snowman"
         />
       </div>
@@ -47,7 +53,7 @@ export let index = `<section class="hero">
       <div class="slider__slide-img-container">
         <img
           class="slider__slide-img"
-          src="/src/assets/img/christmas-trees.png"
+          src="${christmasTreesImage}"
           alt="christmas-trees"
         />
       </div>
@@ -55,7 +61,7 @@ export let index = `<section class="hero">
       <div class="slider__slide-img-container">
         <img
           class="slider__slide-img"
-          src="/src/assets/img/christmas-tree-ball.png"
+          src="${christmasTreeBallImage}"
           alt="christmas-tree-ball"
         />
       </div>
@@ -63,7 +69,7 @@ export let index = `<section class="hero">
       <div class="slider__slide-img-container">
         <img
           class="slider__slide-img"
-          src="/src/assets/img/fairytale-house.png"
+          src="${fairytaleHouseImage}"
           alt="fairytale-house"
         />
       </div>
@@ -104,7 +110,7 @@ export let index = `<section class="hero">
     </div>
   </div>
 </section>
-<section class="gifts best-gifts">
+<section id="gifts" class="gifts best-gifts">
   <div class="gifts__texts best-gifts__texts">
     <span class="caption">Best Gifts</span>
     <h2>especially for you</h2>
@@ -114,7 +120,7 @@ export let index = `<section class="hero">
 <section class="countdown">
   <div class="countdown__content">
     <h2>Ready to start your journey to a better version of yourself?</h2>
-    <button class="countdown__button cta-s" data-url="/gifts">
+    <button class="countdown__button cta-s" data-url="/mahveenya-JSFE2024Q4/christmas-shop/gifts">
       Explore Magical Gifts
     </button>
     <div class="countdown__clock-and-caption">

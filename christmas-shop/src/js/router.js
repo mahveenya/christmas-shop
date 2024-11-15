@@ -1,50 +1,41 @@
 import { populateGiftsSection } from '../js/populateGiftsSection'
 import { index } from '../templates/index'
-import { notFound } from '../templates/404'
 import { gifts } from '../templates/gifts'
 
 document.addEventListener('click', (e) => {
-  const hasURL = e.target.dataset.url
-  const element = e.target.closest('a')
-  const isAnchor = element?.href.includes('#')
+  const element = e.target.closest('a, button, [data-url]')
+  if (!element) return
 
-  if (!hasURL || isAnchor) return
+  if (element.tagName === 'A' && element.href.includes('#')) return
 
-  route(e)
+  const url = element.dataset?.url || element?.href
+
+  e.preventDefault()
+  route(url)
 })
 
 const routes = {
-  '/mahveenya-JSFE2024Q4/christmas-shop/404': notFound,
   '/mahveenya-JSFE2024Q4/christmas-shop/': index,
   '/mahveenya-JSFE2024Q4/christmas-shop/gifts': gifts,
 }
 
-const route = (e) => {
-  const url = e.target.href || e.target.dataset.url
+const route = (url) => {
   window.history.pushState({}, '', url)
+
   locationHandler()
-  if (url == '/gifts') {
-    window.scrollTo({
-      top: 0,
-    })
-  }
+  window.scrollTo({ top: 0 })
 }
 
 const locationHandler = () => {
   const location = window.location.pathname
 
-  if (location.length == 0) {
-    location = '/mahveenya-JSFE2024Q4/christmas-shop/'
-  }
-
   const isOnHomepage = location === '/mahveenya-JSFE2024Q4/christmas-shop/'
-  const numOfGifts = isOnHomepage ? 4 : 12
 
   const main = document.getElementById('main')
 
-  main.innerHTML = routes[location] || 404
+  main.innerHTML = routes[location]
 
-  populateGiftsSection(numOfGifts)
+  populateGiftsSection(isOnHomepage ? 4 : 12)
 }
 
 window.onpopstate = locationHandler

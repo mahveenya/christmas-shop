@@ -2,7 +2,7 @@
 @use '../abstracts' as *;
 
 .gifts {
-  @include bg(url('src/assets/img/bg-garland.png'));
+  @include bg(url('/src/assets/img/bg-garland.png'));
   display: flex;
   flex-direction: column;
   gap: px-to-rem(20);

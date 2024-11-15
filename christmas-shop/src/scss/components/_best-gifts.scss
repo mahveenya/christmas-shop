@@ -2,5 +2,5 @@
 @use '../abstracts' as *;
 
 .best-gifts {
-  @include bg(url('src/assets/img/bg-snow.png'));
+  @include bg(url('/src/assets/img/bg-snow.png'));
 }

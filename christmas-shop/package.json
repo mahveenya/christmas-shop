@@ -11,7 +11,7 @@
     "format:check": "prettier ./ --check",
     "format": "prettier ./ --write",
     "prepare": "cd .. && husky christmas-shop/.husky",
-    "deploy": "npm run build && gh-pages -d dist -m \"feat: update deploy\""
+    "deploy": "npm run build && gh-pages -d dist -m \"feat: deploy new version\""
   },
   "author": "",
   "license": "ISC",

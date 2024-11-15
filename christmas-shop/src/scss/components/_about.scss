@@ -2,7 +2,7 @@
 @use '../abstracts' as *;
 
 .about {
-  @include bg(url('src/assets/img/bg-snow.png'));
+  @include bg(url('/src/assets/img/bg-snow.png'));
   display: flex;
   justify-content: center;
   padding: $content-block-padding $content-inline-padding;

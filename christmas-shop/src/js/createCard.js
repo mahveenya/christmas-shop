@@ -1,3 +1,13 @@
+import forHarmonyImage from '/src/assets/img/gift-for-harmony.png'
+import forHealthImage from '/src/assets/img/gift-for-health.png'
+import forWorkImage from '/src/assets/img/gift-for-harmony.png'
+
+const imagesObj = {
+  'for-harmony': forHarmonyImage,
+  'for-health': forHealthImage,
+  'for-work': forWorkImage,
+}
+
 export function createCard(cardData) {
   const figure = document.createElement('figure')
   const imageContainer = document.createElement('div')
@@ -5,6 +15,7 @@ export function createCard(cardData) {
   const figcaption = document.createElement('figcaption')
   const h4 = document.createElement('h4')
   const h3 = document.createElement('h3')
+
   const labelText = cardData.category.toLowerCase()
   const labelAttribute = labelText.replace(' ', '-')
 
@@ -13,7 +24,7 @@ export function createCard(cardData) {
   imageContainer.style.width = '310px'
   imageContainer.style.height = '230px'
 
-  img.src = `/src/assets/img/gift-${labelAttribute}.png`
+  img.src = imagesObj[labelAttribute]
   img.alt = 'gift image'
   img.classList.add('gifts__card-img')
 
