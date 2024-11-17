@@ -11,7 +11,10 @@ document.addEventListener('click', (e) => {
   const element = e.target.closest('a, button, [data-url]')
   if (!element) return
 
-  if (element.tagName === 'A' && element.href.includes('#')) return
+  const isHashAnchor = element.tagName === 'A' && element.href.includes('#')
+  const isInFooter = element.closest('footer')
+
+  if (isHashAnchor || isInFooter) return
 
   const url = element.dataset?.url || element?.href
 
