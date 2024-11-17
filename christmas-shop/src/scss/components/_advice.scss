@@ -42,7 +42,7 @@
     }
 
     &__arrow {
-      @extend %slider-arrow;
+      @include slider-arrow;
 
       &:not(&--disabled):hover {
         background-color: $white;

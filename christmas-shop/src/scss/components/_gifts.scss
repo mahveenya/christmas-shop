@@ -71,7 +71,7 @@
   }
 
   &__tab {
-    @extend %button;
+    @include button;
     padding: px-to-rem(12) px-to-rem(20);
     border-radius: px-to-rem(12);
     color: $white;

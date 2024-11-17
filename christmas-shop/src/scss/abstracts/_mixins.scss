@@ -1,4 +1,3 @@
-@use 'sass:list';
 @use '../constants' as *;
 
 @mixin bg($backgrounds...) {
@@ -6,4 +5,27 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $button-padding;
+  border: none;
+  border-radius: $base-radius;
+  background-color: inherit;
+  transition: $transition;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin slider-arrow {
+  @include button;
+  width: 56px;
+  height: 56px;
+  border: solid $white 1px;
+  padding: initial;
 }
