@@ -26,9 +26,10 @@
       gap: px-to-rem(12);
       transition: $transition;
     }
-
-    &:hover &-text {
-      color: $red;
+    @media (hover: hover) {
+      &:hover &-text {
+        color: $red;
+      }
     }
 
     &-img {
@@ -54,16 +55,20 @@
       transition: $transition;
     }
 
-    &:hover svg path {
-      stroke: $red;
-      cursor: pointer;
+    @media (hover: hover) {
+      &:hover svg path {
+        stroke: $red;
+        cursor: pointer;
+      }
     }
   }
 
-  &__rss {
-    transition: $transition;
-    &:hover {
-      color: $red;
+  @media (hover: hover) {
+    &__rss {
+      transition: $transition;
+      &:hover {
+        color: $red;
+      }
     }
   }
 }

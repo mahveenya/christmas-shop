@@ -42,13 +42,16 @@
     }
 
     &__arrow {
-      @include slider-arrow;
+      @extend %slider-arrow;
 
-      &:not(&--disabled):hover {
-        background-color: $white;
+      @media (hover: hover) {
+        &:not(&--disabled):hover {
+          cursor: pointer;
+          background-color: $white;
 
-        & svg path {
-          stroke: $red;
+          & svg path {
+            stroke: $red;
+          }
         }
       }
 

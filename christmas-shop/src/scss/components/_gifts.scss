@@ -31,12 +31,14 @@
     border-radius: $base-radius;
     background-color: $soft-sky;
 
-    &:hover {
-      cursor: pointer;
-    }
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+      }
 
-    &:hover &-figcaption:last-child {
-      color: $red;
+      &:hover &-figcaption:last-child {
+        color: $red;
+      }
     }
 
     &-figcaption {
@@ -72,7 +74,7 @@
   }
 
   &__tab {
-    @include button;
+    @extend %button;
     padding: px-to-rem(12) px-to-rem(20);
     border-radius: px-to-rem(12);
     color: $white;
@@ -84,8 +86,11 @@
       }
     }
 
-    &:not(&--active):hover {
-      background-color: $white-20;
+    @media (hover: hover) {
+      &:not(&--active):hover {
+        cursor: pointer;
+        background-color: $white-20;
+      }
     }
   }
 }
