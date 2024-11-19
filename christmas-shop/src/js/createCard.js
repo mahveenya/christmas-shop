@@ -33,8 +33,7 @@ export function createCard(cardData) {
   h4.dataset.label = labelAttribute
   h4.textContent = labelText
 
-  h3.classList.add('gifts__card-description--truncate')
-  h3.textContent = cardData.description
+  h3.textContent = cardData.name
 
   figcaption.append(h4, h3)
   imageContainer.append(img)
