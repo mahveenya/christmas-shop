@@ -4,7 +4,7 @@
 .footer {
   display: flex;
   flex-direction: column;
-  padding: $content-block-padding $content-inline-padding;
+  padding: $content-block-padding $desktop-content-inline-padding;
   gap: px-to-rem(60);
 
   &__contact-cards {
@@ -16,10 +16,10 @@
     @extend %centered;
     gap: px-to-rem(12);
     padding: px-to-rem(20);
-    min-width: 364px;
+    min-width: 417px;
     border-radius: $base-radius;
     background-color: $soft-sky;
-    flex: 1;
+    flex-grow: 1;
 
     &-text {
       @extend %centered;

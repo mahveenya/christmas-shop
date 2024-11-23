@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: px-to-rem(20);
-  padding: $content-block-padding $content-inline-padding;
+  padding: $content-block-padding $desktop-content-inline-padding;
   background-size: contain;
   background-position-y: top;
 

@@ -5,7 +5,7 @@
   @include bg(url('/src/assets/img/bg-snow.png'));
   display: flex;
   justify-content: center;
-  padding: $content-block-padding $content-inline-padding;
+  padding: $content-block-padding $desktop-content-inline-padding;
 
   &__caption {
     color: $red;
@@ -29,7 +29,7 @@
   }
 
   &__img-container {
-    min-width: 364px;
+    min-width: 375px;
     height: 528px;
     overflow: hidden;
   }
