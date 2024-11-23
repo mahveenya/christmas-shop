@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: px-to-rem(20);
-  padding: $content-block-padding $content-inline-padding;
+  padding: $content-block-padding $desktop-content-inline-padding;
   color: $white;
 
   &__texts {
@@ -42,13 +42,16 @@
     }
 
     &__arrow {
-      @include slider-arrow;
+      @extend %slider-arrow;
 
-      &:not(&--disabled):hover {
-        background-color: $white;
+      @media (hover: hover) {
+        &:not(&--disabled):hover {
+          cursor: pointer;
+          background-color: $white;
 
-        & svg path {
-          stroke: $red;
+          & svg path {
+            stroke: $red;
+          }
         }
       }
 

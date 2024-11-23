@@ -4,7 +4,7 @@ import christmasTreesImage from '/src/assets/img/christmas-trees.png'
 import christmasTreeBallImage from '/src/assets/img/christmas-tree-ball.png'
 import fairytaleHouseImage from '/src/assets/img/fairytale-house.png'
 
-export let index = `<section class="hero">
+export let index = `<section class="section hero">
   <div class="hero__content">
     <span class="caption">Merry Christmas</span>
     <h1>Gift yourself the magic of new possibilities</h1>
@@ -14,7 +14,7 @@ export let index = `<section class="hero">
     <span class="caption">and Happy New Year</span>
   </div>
 </section>
-<section id="about" class="about">
+<section id="about" class="section about">
   <div class="about__container">
     <div class="about__content">
       <span class="caption about__caption">About</span>
@@ -34,7 +34,7 @@ export let index = `<section class="hero">
     </div>
   </div>
 </section>
-<section class="advice">
+<section class="section advice">
   <div class="advice__texts">
     <span class="caption">Become Happier!</span>
     <h2>in the new 2025</h2>
@@ -110,14 +110,14 @@ export let index = `<section class="hero">
     </div>
   </div>
 </section>
-<section id="gifts" class="gifts best-gifts">
+<section id="gifts" class="section gifts best-gifts">
   <div class="gifts__texts best-gifts__texts">
     <span class="caption">Best Gifts</span>
     <h2>especially for you</h2>
   </div>
   <div class="gifts__cards"></div>
 </section>
-<section class="countdown">
+<section class="section countdown">
   <div class="countdown__content">
     <h2>Ready to start your journey to a better version of yourself?</h2>
     <button class="countdown__button cta-s" data-url="/mahveenya-JSFE2024Q4/christmas-shop/gifts">

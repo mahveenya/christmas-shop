@@ -2,8 +2,43 @@
 @use '../abstracts' as *;
 
 .header {
-  padding-inline: $content-inline-padding;
+  padding-inline: $desktop-content-inline-padding;
   padding-block: px-to-rem(12);
+  transition: $transition;
+
+  &__burger-menu {
+    border: none;
+  }
+
+  @media screen and (width < 769px) {
+    &__burger-menu {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        position: absolute;
+        border: solid $dark 1px;
+        width: 20px;
+        top: 16px;
+        left: 10px;
+        transform: rotate(180deg);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        border: solid $dark 1px;
+        width: 20px;
+        bottom: 16px;
+        left: 10px;
+        transform: rotate(180deg);
+      }
+    }
+  }
 
   &__nav {
     display: flex;
@@ -33,6 +68,11 @@
     &-item {
       display: flex;
       align-items: center;
+      @media screen and (width < 769px) {
+        & {
+          display: none;
+        }
+      }
     }
 
     &-link {
@@ -41,9 +81,11 @@
       border-radius: px-to-rem(12);
       transition: $transition;
 
-      &:not(.logo):hover {
-        background-color: $red-10;
-        color: $red;
+      @media (hover: hover) {
+        &:not(.logo):hover {
+          background-color: $red-10;
+          color: $red;
+        }
       }
     }
   }

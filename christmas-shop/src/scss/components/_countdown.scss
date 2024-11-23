@@ -44,14 +44,17 @@
   }
 
   &__button {
-    @include button;
+    @extend %button;
     width: 236px;
     background-color: $dark;
     color: $white;
 
-    &:hover {
-      background-color: $white;
-      color: $dark;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $white;
+        color: $dark;
+        cursor: pointer;
+      }
     }
   }
 }

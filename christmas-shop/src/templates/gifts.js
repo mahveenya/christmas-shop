@@ -1,4 +1,4 @@
-export let gifts = `<section class="gifts">
+export let gifts = `<section class="gifts section">
   <div class="gifts__texts">
     <h1>Achieve health, harmony, and inner strength</h1>
   </div>
