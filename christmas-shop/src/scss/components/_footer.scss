@@ -21,6 +21,12 @@
     background-color: $soft-sky;
     flex-grow: 1;
 
+    @media screen and (width < 381px) {
+      & {
+        min-width: 0;
+      }
+    }
+
     &-text {
       @extend %centered;
       gap: px-to-rem(12);

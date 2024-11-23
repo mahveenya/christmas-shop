@@ -6,7 +6,6 @@
   display: flex;
   justify-content: center;
   padding: $content-block-padding $desktop-content-inline-padding;
-
   &__caption {
     color: $red;
   }
@@ -17,21 +16,37 @@
     flex-grow: 1;
     border-radius: $base-radius;
     background-color: $white;
+
+    @media screen and (width < 768px) {
+      & {
+        flex-wrap: wrap;
+      }
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: px-to-rem(60);
-    max-width: 426px;
+    padding: $content-block-padding;
+    max-width: 546px;
     gap: px-to-rem(20);
+    @media screen and (width < 381px) {
+      & {
+        padding: $content-block-padding px-to-rem(20);
+      }
+    }
   }
 
   &__img-container {
-    min-width: 375px;
+    min-width: 376px;
     height: 528px;
     overflow: hidden;
+    @media screen and (width < 381px) {
+      & {
+        min-width: 364px;
+      }
+    }
   }
 
   &__img {
