@@ -12,7 +12,7 @@
 
   &__texts {
     @extend %centered;
-    width: 426px;
+    max-width: 426px;
     gap: px-to-rem(12);
     color: $white;
   }
@@ -71,6 +71,11 @@
     justify-content: center;
     gap: px-to-rem(8);
     color: $white;
+    @media screen and (width < 381px) {
+      & {
+        gap: 0;
+      }
+    }
   }
 
   &__tab {
@@ -78,6 +83,12 @@
     padding: px-to-rem(12) px-to-rem(20);
     border-radius: px-to-rem(12);
     color: $white;
+
+    @media screen and (width < 381px) {
+      & {
+        padding: px-to-rem(12) px-to-rem(8);
+      }
+    }
 
     &--active {
       background-color: $white-20;
