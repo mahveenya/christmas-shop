@@ -21,6 +21,10 @@ body {
   color: $dark;
 }
 
+ul {
+  list-style: none;
+}
+
 main {
   background-color: $red;
   border-radius: $base-radius;

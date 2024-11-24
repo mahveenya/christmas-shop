@@ -5,7 +5,7 @@
   padding-inline: $desktop-content-inline-padding;
   padding-block: px-to-rem(12);
 
-  @media screen and (max-width: 796px) {
+  @media screen and (max-width: 768px) {
     & {
       padding-inline: $tablet-content-inline-padding;
     }
@@ -15,13 +15,11 @@
     border: none;
   }
 
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 768px) {
     &__burger-menu {
       position: relative;
       width: 40px;
       height: 40px;
-      border: none;
-      background-color: inherit;
       cursor: pointer;
 
       &::before {
@@ -29,7 +27,7 @@
         position: absolute;
         border: solid $dark 1px;
         width: 20px;
-        top: 16px;
+        top: 15px;
         left: 10px;
         transform: rotate(180deg);
       }
@@ -38,7 +36,7 @@
         position: absolute;
         border: solid $dark 1px;
         width: 20px;
-        bottom: 16px;
+        bottom: 15px;
         left: 10px;
         transform: rotate(180deg);
       }
@@ -73,7 +71,7 @@
     &-item {
       display: flex;
       align-items: center;
-      @media screen and (max-width: 769px) {
+      @media screen and (max-width: 768px) {
         & {
           display: none;
         }
