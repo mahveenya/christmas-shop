@@ -1,8 +1,0 @@
-@use '../constants' as *;
-@use '../abstracts' as *;
-
-@media screen and (width < 769px) {
-  .section {
-    padding-inline: $tablet-content-inline-padding;
-  }
-}

@@ -6,6 +6,11 @@
   display: flex;
   justify-content: center;
   padding: $content-block-padding $desktop-content-inline-padding;
+  @media screen and (max-width: 768px) {
+    & {
+      padding-inline: $tablet-content-inline-padding;
+    }
+  }
   &__caption {
     color: $red;
   }
@@ -14,11 +19,13 @@
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+    gap: px-to-rem(60);
     border-radius: $base-radius;
     background-color: $white;
 
-    @media screen and (width < 768px) {
+    @media screen and (max-width: 654px) {
       & {
+        justify-content: space-between;
         flex-wrap: wrap;
       }
     }
@@ -28,23 +35,27 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: $content-block-padding;
-    max-width: 546px;
     gap: px-to-rem(20);
-    @media screen and (width < 381px) {
+    padding-left: $content-block-padding;
+    min-width: 316px;
+    max-width: 486px;
+    @media screen and (max-width: 767px) {
       & {
-        padding: $content-block-padding px-to-rem(20);
+        max-width: unset;
+        min-width: 0;
+        padding-top: $content-block-padding;
+        padding-inline: px-to-rem(20);
       }
     }
   }
 
   &__img-container {
     min-width: 376px;
-    height: 528px;
+    min-height: 528px;
     overflow: hidden;
-    @media screen and (width < 381px) {
+    @media screen and (max-width: 654px) {
       & {
-        min-width: 364px;
+        min-width: 0;
       }
     }
   }

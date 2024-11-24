@@ -4,13 +4,18 @@
 .header {
   padding-inline: $desktop-content-inline-padding;
   padding-block: px-to-rem(12);
-  transition: $transition;
+
+  @media screen and (max-width: 796px) {
+    & {
+      padding-inline: $tablet-content-inline-padding;
+    }
+  }
 
   &__burger-menu {
     border: none;
   }
 
-  @media screen and (width < 769px) {
+  @media screen and (max-width: 769px) {
     &__burger-menu {
       position: relative;
       width: 40px;
@@ -68,7 +73,7 @@
     &-item {
       display: flex;
       align-items: center;
-      @media screen and (width < 769px) {
+      @media screen and (max-width: 769px) {
         & {
           display: none;
         }

@@ -7,6 +7,12 @@
   padding: $content-block-padding $desktop-content-inline-padding;
   gap: px-to-rem(60);
 
+  @media screen and (max-width: 768px) {
+    & {
+      padding-inline: $tablet-content-inline-padding;
+    }
+  }
+
   &__contact-cards {
     display: flex;
     gap: px-to-rem(12);
@@ -21,7 +27,7 @@
     background-color: $soft-sky;
     flex-grow: 1;
 
-    @media screen and (width < 381px) {
+    @media screen and (max-width: 440px) {
       & {
         min-width: 0;
       }
