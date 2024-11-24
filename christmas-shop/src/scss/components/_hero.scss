@@ -11,7 +11,7 @@
   padding-block: px-to-rem(120);
 
   &__content {
-    @extend %centered;
+    @extend %center-text;
     gap: px-to-rem(12);
     max-width: 430px;
     color: $white;

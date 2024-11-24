@@ -42,7 +42,7 @@
     @media screen and (max-width: 767px) {
       & {
         max-width: unset;
-        min-width: 0;
+        min-width: unset;
         padding-top: $content-block-padding;
         padding-inline: px-to-rem(20);
       }
@@ -55,7 +55,7 @@
     overflow: hidden;
     @media screen and (max-width: 654px) {
       & {
-        min-width: 0;
+        min-width: unset;
       }
     }
   }

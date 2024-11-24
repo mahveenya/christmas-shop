@@ -16,7 +16,7 @@
   }
 
   &__texts {
-    @extend %centered;
+    @extend %center-text;
     gap: px-to-rem(12);
   }
 
