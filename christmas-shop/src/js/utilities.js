@@ -1,13 +1,11 @@
 import gifts from '../assets/data/gifts'
 
-export function getRandomGifts(numOfGifts) {
+export function getGifts(numOfGifts) {
   const { data } = gifts
-  if (numOfGifts > data.length) {
-    throw new Error(
-      `Number of required cards to be returned cannot be more than ${giftsData.length}`
-    )
+  if (numOfGifts) {
+    const shuffledArray = data.slice().sort(() => Math.random() - 0.5)
+    return shuffledArray.slice(0, numOfGifts)
+  } else {
+    return data
   }
-
-  const shuffledArray = data.slice().sort(() => Math.random() - 0.5)
-  return shuffledArray.slice(0, numOfGifts)
 }
