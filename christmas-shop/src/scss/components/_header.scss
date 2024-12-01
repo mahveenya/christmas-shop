@@ -53,11 +53,9 @@
       border-radius: px-to-rem(12);
       transition: $transition;
 
-      @media (hover: hover) {
-        &:not(.logo):hover {
-          background-color: $red-10;
-          color: $red;
-        }
+      &:not(.logo):hover {
+        background-color: $red-10;
+        color: $red;
       }
     }
   }
