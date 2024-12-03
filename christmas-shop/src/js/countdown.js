@@ -2,7 +2,7 @@ function updateTimer() {
   const now = new Date()
 
   const nextYear = now.getFullYear() + 1
-  const newYear = new Date(`${nextYear}-01-01T00:00:00`)
+  const newYear = new Date(Date.UTC(nextYear, 0, 1, 0, 0, 0))
 
   const diff = newYear - now
 
