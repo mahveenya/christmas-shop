@@ -1,10 +1,14 @@
-import { populateGiftsSection } from '../js/populateGiftsSection'
+import { populateGiftsSection } from './populateGiftsSection'
 import { index } from '../templates/index'
 import { gifts } from '../templates/gifts'
 
+const BASE = import.meta.env.BASE_URL || '/'
+
 const routes = {
-  '/mahveenya-JSFE2024Q4/christmas-shop/': index,
-  '/mahveenya-JSFE2024Q4/christmas-shop/gifts': gifts,
+  [BASE]: index,
+  [BASE + 'gifts']: gifts,
+  '/': index,
+  '/gifts': gifts,
 }
 
 document.addEventListener('click', (e) => {
@@ -25,8 +29,7 @@ document.addEventListener('click', (e) => {
 })
 
 const route = (url) => {
-  let urlPath = url
-  if (url.includes('http')) urlPath = new URL(url).pathname
+  let urlPath = new URL(url, window.location.href).pathname
 
   const currentState = window.history.state || {}
   const isSamePath = currentState.path === urlPath
@@ -42,11 +45,17 @@ const route = (url) => {
 const locationHandler = () => {
   const location = window.location.pathname
 
-  const isOnHomepage = location === '/mahveenya-JSFE2024Q4/christmas-shop/'
+  const normalize = (p) => (p.endsWith('/') ? p : p + '/')
+  const normalizedLocation = normalize(location)
+  const normalizedBase = normalize(BASE)
+
+  const isOnHomepage =
+    normalizedLocation === normalizedBase || normalizedLocation === '/'
 
   const main = document.getElementById('main')
 
-  main.innerHTML = routes[location]
+  const template = routes[location] || routes[normalizedLocation] || index
+  main.innerHTML = template
 
   populateGiftsSection(isOnHomepage ? 4 : null)
 }
