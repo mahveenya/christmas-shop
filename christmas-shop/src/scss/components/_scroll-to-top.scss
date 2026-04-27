@@ -1,0 +1,21 @@
+@use '../constants' as *;
+@use '../abstracts' as *;
+
+.scroll-to-top-button {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  background-color: $white;
+  border: solid $red 1px;
+  border-radius: 100px;
+  rotate: 270deg;
+  bottom: 8px;
+  right: 8px;
+
+  & svg path {
+    stroke: $red;
+  }
+}

@@ -17,7 +17,7 @@
   }
 
   &__texts {
-    @extend %centered;
+    @extend %center-text;
     max-width: 426px;
     gap: px-to-rem(12);
     color: $white;

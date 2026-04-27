@@ -2,44 +2,13 @@
 @use '../abstracts' as *;
 
 .header {
+  position: relative;
   padding-inline: $desktop-content-inline-padding;
   padding-block: px-to-rem(12);
 
   @media screen and (max-width: 768px) {
     & {
       padding-inline: $tablet-content-inline-padding;
-    }
-  }
-
-  &__burger-menu {
-    border: none;
-  }
-
-  @media screen and (max-width: 768px) {
-    &__burger-menu {
-      position: relative;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-
-      &::before {
-        content: '';
-        position: absolute;
-        border: solid $dark 1px;
-        width: 20px;
-        top: 15px;
-        left: 10px;
-        transform: rotate(180deg);
-      }
-      &::after {
-        content: '';
-        position: absolute;
-        border: solid $dark 1px;
-        width: 20px;
-        bottom: 15px;
-        left: 10px;
-        transform: rotate(180deg);
-      }
     }
   }
 
@@ -84,11 +53,9 @@
       border-radius: px-to-rem(12);
       transition: $transition;
 
-      @media (hover: hover) {
-        &:not(.logo):hover {
-          background-color: $red-10;
-          color: $red;
-        }
+      &:not(.logo):hover {
+        background-color: $red-10;
+        color: $red;
       }
     }
   }

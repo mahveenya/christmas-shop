@@ -48,7 +48,7 @@ const locationHandler = () => {
 
   main.innerHTML = routes[location]
 
-  populateGiftsSection(isOnHomepage ? 4 : 12)
+  populateGiftsSection(isOnHomepage ? 4 : null)
 }
 
 window.onpopstate = locationHandler

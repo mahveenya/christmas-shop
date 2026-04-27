@@ -1,0 +1,76 @@
+@use '../constants' as *;
+@use '../abstracts' as *;
+
+.burger {
+  &__button {
+    transition: $transition;
+
+    @media screen and (max-width: 768px) {
+      & {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-color: inherit;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          border: solid $dark 1px;
+          width: 20px;
+          left: 10px;
+          transition: $transition;
+        }
+
+        &::before {
+          top: 15px;
+        }
+
+        &::after {
+          bottom: 15px;
+        }
+
+        &--active::before {
+          transform: translateY(4px) rotate(45deg);
+        }
+
+        &--active::after {
+          transform: translateY(-4px) rotate(-45deg);
+        }
+      }
+    }
+  }
+  &__menu {
+    display: none;
+    transition: $transition;
+
+    @media screen and (max-width: 768px) {
+      & {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        gap: px-to-rem(8);
+        width: 100vw;
+        height: 100vh;
+        background-color: $white;
+        top: px-to-rem(64);
+        left: 0;
+        transform: translateX(200vh);
+
+        &--active {
+          transform: translateX(0vh);
+        }
+
+        &-item {
+          display: flex;
+        }
+        &-link {
+          padding: px-to-rem(12) px-to-rem(20);
+        }
+      }
+    }
+  }
+}

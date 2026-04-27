@@ -16,7 +16,7 @@
   }
 
   &__texts {
-    @extend %centered;
+    @extend %center-text;
     gap: px-to-rem(12);
   }
 
@@ -29,6 +29,7 @@
       display: flex;
       align-items: center;
       gap: px-to-rem(20);
+      transition: $transition;
     }
 
     &__slide-img-container {

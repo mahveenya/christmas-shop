@@ -19,7 +19,7 @@
     flex-wrap: wrap;
   }
   &__contact-card {
-    @extend %centered;
+    @extend %center-text;
     gap: px-to-rem(12);
     padding: px-to-rem(20);
     min-width: 417px;
@@ -34,7 +34,7 @@
     }
 
     &-text {
-      @extend %centered;
+      @extend %center-text;
       gap: px-to-rem(12);
       transition: $transition;
     }
@@ -51,7 +51,7 @@
   }
 
   &__contacts {
-    @extend %centered;
+    @extend %center-text;
     gap: px-to-rem(12);
   }
 

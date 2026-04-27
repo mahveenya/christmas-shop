@@ -1,6 +1,7 @@
 @use '../constants' as *;
 
 .content {
+  position: relative;
   max-width: $content-width;
   margin-inline: auto;
   overflow: hidden;

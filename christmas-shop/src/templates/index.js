@@ -126,23 +126,23 @@ export let index = `<section class="section hero">
     <div class="countdown__clock-and-caption">
       <span class="caption">The New Year is Coming Soon...</span>
       <div class="countdown__clock">
-        <div class="countdown__clock-time-cell" data-time-unit="days">
-          <h2 class="countdown__clock-time-value">47</h2>
+        <div class="countdown__clock-time-cell">
+          <h2 id="days" class="countdown__clock-time-value">47</h2>
           <h4 class="countdown__clock-time-label">days</h4>
         </div>
         <div class="countdown__clock-time-cell-separator"></div>
-        <div class="countdown__clock-time-cell" data-time-unit="hours">
-          <h2 class="countdown__clock-time-value">5</h2>
+        <div class="countdown__clock-time-cell">
+          <h2 id="hours" class="countdown__clock-time-value">5</h2>
           <h4 class="countdown__clock-time-label">hours</h4>
         </div>
         <div class="countdown__clock-time-cell-separator"></div>
-        <div class="countdown__clock-time-cell" data-time-unit="minutes">
-          <h2 class="countdown__clock-time-value">34</h2>
+        <div class="countdown__clock-time-cell">
+          <h2 id="minutes" class="countdown__clock-time-value">34</h2>
           <h4 class="countdown__clock-time-label">minutes</h4>
         </div>
         <div class="countdown__clock-time-cell-separator"></div>
-        <div class="countdown__clock-time-cell" data-time-unit="seconds">
-          <h2 class="countdown__clock-time-value">12</h2>
+        <div class="countdown__clock-time-cell">
+          <h2 id="seconds" class="countdown__clock-time-value">12</h2>
           <h4 class="countdown__clock-time-label">seconds</h4>
         </div>
       </div>
