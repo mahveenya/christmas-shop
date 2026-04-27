@@ -8,7 +8,7 @@ export let index = `<section class="section hero">
   <div class="hero__content">
     <span class="caption">Merry Christmas</span>
     <h1>Gift yourself the magic of new possibilities</h1>
-    <button class="hero__button cta-s" data-url="/mahveenya-JSFE2024Q4/christmas-shop/gifts">
+    <button class="hero__button cta-s" data-url="./gifts">
       Explore Magical Gifts
     </button>
     <span class="caption">and Happy New Year</span>
@@ -120,7 +120,7 @@ export let index = `<section class="section hero">
 <section class="section countdown">
   <div class="countdown__content">
     <h2>Ready to start your journey to a better version of yourself?</h2>
-    <button class="countdown__button cta-s" data-url="/mahveenya-JSFE2024Q4/christmas-shop/gifts">
+    <button class="countdown__button cta-s" data-url="./gifts">
       Explore Magical Gifts
     </button>
     <div class="countdown__clock-and-caption">
